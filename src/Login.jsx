@@ -25,8 +25,8 @@ const Login = () => {
            
            </div>
            <button className='btn bg-green-600 mt-5'>Submit</button>
-           <div className='mt-2'>
-            <h2 className='font-bold'>You have Allrady Account? <Link className='bg-green-700 p-1 rounded-2xl text-xs' 
+           <div className='mt-2 mb-3'>
+            <h2 className='font-bold '>You have Allrady Account? <Link className='bg-green-700 p-1 rounded-2xl text-xs' 
             to="/Account">Login</Link></h2>
            </div>
         </div>

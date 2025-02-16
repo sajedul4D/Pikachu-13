@@ -4,8 +4,7 @@ import MainLayout from "./MainLayout"
 import Login from "./Login"
 import Banner from "./Banner"
 import Account from "./Account"
-import History from "./History"
-import Recharge from "./Recharge"
+
 
 
 
@@ -25,13 +24,7 @@ element:<Banner></Banner>
         {
             path:"/Account",
             element:<Account></Account>
-        },{
-            path:"/history",
-            element:<History></History>
-        },{
-            path:'/recharge',
-            element:<Recharge></Recharge>
-        }
+        },
     ]
   
 }])
