@@ -1,3 +1,4 @@
+import { Map } from '@vis.gl/react-google-maps';
 import React, { useState } from 'react';
 
 
@@ -10,7 +11,13 @@ const Banner = () => {
                 <div className='flex  gap-3'>
 
                 <div className='w-3/4 border-y-2 border-green-500 rounded-3xl   bg-gradient-to-bl p-5 to-green-100'>
-                <img className='rounded-2xl h-[400px] w-full object-cover' src="https://acropolium.com/img/articles/gps-tracking/img01.jpg" alt="" />
+                <Map
+      style={{width: '60vw', height: '60vh'}}
+      defaultCenter={{lat: 23.6850, lng:90.3563}}
+      defaultZoom={10}
+      gestureHandling={'greedy'}
+      disableDefaultUI={true}
+    />
                 </div>
                 <div className='w-1/5 border-y-2 border-green-500 rounded-3xl  bg-gradient-to-bl to-green-100 '>
                    <div className=' my-2 mx-1 rounded-2xl'>
@@ -30,10 +37,10 @@ const Banner = () => {
             <div className='flex justify-center items-center'>
             <button 
               onClick={() => setIsOpen(false)} 
-              className="absolute top-0 left-0 m-4 px-3 py-1 bg-green-700 font-bold text-white rounded hover:bg-red-600  "
+              className="absolute top-0 left-0   "
             >
              
-             Close
+             <span className='z-50 fixed m-4 px-3 py-1 bg-green-700 font-bold text-white rounded hover:bg-red-600'>Close</span>
              
             </button>
             <h2 className="text-xl font-bold mb-4  text-center">Troll History</h2>
@@ -162,10 +169,10 @@ const Banner = () => {
             <div className='flex justify-center items-center'>
             <button 
               onClick={() => setIsOpens(false)} 
-              className="absolute top-0 left-0 m-4 px-3 py-1 bg-green-700 text-white rounded hover:bg-red-600 font-bold  "
+              className="absolute top-0 left-0  "
             >
              
-             Close
+            <span className='z-50 fixed  m-4 px-3 py-1 bg-green-700 text-white rounded hover:bg-red-600 font-bold'> Close</span>
              
             </button>
             <h2 className="text-xl font-bold mb-4  text-center"> Recharge  History</h2>
